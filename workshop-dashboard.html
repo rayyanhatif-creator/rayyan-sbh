@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>اشترك معنا كخراط | ورش السعودية</title>
+<title>الخراطين | ورش السعودية</title>
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -18,70 +18,39 @@
 ورش السعودية
 </a>
 
-</header>
+<div class="menu">
 
-<main class="auth-page">
+<button onclick="openMenu()">⋯</button>
 
-<div class="auth-card">
+<div id="menuList" class="menu-list">
 
-<h1>اشترك معنا كخراط</h1>
-
-<p>
-اعرض ورشتك واستقبل الحجوزات من عملائك
-</p>
-
-<form onsubmit="registerWorkshop(event)">
-
-<input
-id="workshopName"
-placeholder="اسم الورشة"
-required>
-
-<input
-id="workshopOwner"
-placeholder="اسم المسؤول"
-required>
-
-<input
-id="workshopPhone"
-placeholder="رقم الجوال"
-required>
-
-<input
-id="workshopEmail"
-type="email"
-placeholder="البريد الإلكتروني"
-required>
-
-<input
-id="workshopCity"
-placeholder="المدينة"
-required>
-
-<input
-id="workshopPassword"
-type="password"
-placeholder="كلمة المرور"
-required>
-
-<textarea
-id="workshopBio"
-placeholder="نبذة عن الورشة"
-required></textarea>
-
-<button class="main-btn">
-إنشاء حساب الورشة
-</button>
-
-</form>
-
-<div id="workshopMessage"></div>
+<a href="workshops.html">الخراطين</a>
+<a href="workshop-register.html">اشترك معنا كخراط</a>
+<a href="login.html">تسجيل الدخول</a>
 
 </div>
 
-</main>
+</div>
+
+</header>
+
+<section class="page-header">
+
+<h1>الخراطين</h1>
+
+<p>
+اكتشف الورش المسجلة في ورش السعودية
+</p>
+
+</section>
+
+<main class="workshop-grid" id="workshopGrid"></main>
 
 <script src="app.js"></script>
+
+<script>
+loadWorkshops();
+</script>
 
 </body>
 </html>
